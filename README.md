@@ -1,7 +1,7 @@
 # Image Editing Tool
 
 ## Overview
-This project is a browser-based image editing tool developed for the course "Selected Areas of Human-Technology Interaction". It was built using plain JavaScript, HTML, and CSS to implement basic image processing algorithms without relying on external libraries.
+This project is a browser-based image editing tool developed for the course "Selected Areas of Human-Computer Interaction". It was built using plain JavaScript, HTML, and CSS to implement basic image processing algorithms without relying on external libraries.
 
 <img src="example_photo.png" alt="Example Photo" width="600"/>
 
