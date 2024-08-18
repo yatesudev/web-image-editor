@@ -1,0 +1,56 @@
+@media only screen and (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+
+    .middlecontainer
+    {
+        grid-column: 1 / 3;
+        overflow: visible;
+        min-height: 20vh;
+    }
+
+    .dark {
+        display: none;
+    }
+
+    .topcontainer {
+        grid-column: 1 / 3;
+        overflow: auto;
+    }
+
+    .topcontainer button {
+        font-size: 0.7em;
+        height: 80%;
+        margin: 1% auto;
+    }
+
+    .verticalSeperator {
+        display: none;
+    }
+
+    .settings {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .leftcontainer,
+    .rightcontainer {
+        grid-row: 3;
+        
+    }
+
+    .leftcontainer {
+        grid-column: 1;
+    }
+
+    .rightcontainer {
+        grid-column: 2;
+    }
+}

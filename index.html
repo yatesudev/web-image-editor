@@ -1,0 +1,201 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="co-authored by Patryk Widulinski, Mateusz Goralewski">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildbearbeitung - Praktikum #2 Projekt</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="icon" href="./assets/Download.jpg">
+    <script type="module" src="./script/main.js"></script>
+    <script src="https://kit.fontawesome.com/9b190cd631.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <div class="container topcontainer">
+            
+            <label class="switch" title="toggle between light and darkmode">
+                <input type="checkbox" id="checkbox">
+                <span class="sliderToggle round"></span>
+            </label>
+
+            <div class="settings">
+                <button class="headerButton" id="goBackInHistory" >Undo</button>
+                <button class="headerButton" id="goForwardInHistory" >Redo</button>
+
+                <div class="verticalSeperator"></div>
+                <button class="headerButton" id="deleteImage">Bild löschen</button>
+                <button class="headerButton" id="resetImage">Bild zurücksetzen</button>
+                <button class="headerButton" id="saveImage">Bild speichern</button>
+
+                <div class="verticalSeperator"></div>
+
+                <button class="headerButton" id="displayColorHistogram">Update Color Histogram</button>
+            </div>
+        </div>
+
+        <div class="container leftcontainer">
+                
+            <div class="category">
+                <h3 class="categoryTitle">Translation</h3>
+                <div class="categoryElement">
+                    <h1 class="title">Mirror</h1>
+                    <button class="sideBarButton" id="verticalMirror" title="flip image vertically"><i class="fa-solid fa-up-down"></i></button> 
+                    <button class="sideBarButton" id="horizontalMirror" title="flip image horizontally"><i class="fa-solid fa-left-right"></i></button>
+                </div>
+    
+                <div class="categoryElement">
+                    <h1 class="title">Rotate</h1>
+                    <button class="sideBarButton" id="rotateCounterClockwise" title="rotate image to the left"><i class="fa-solid fa-rotate-left"></i></button> 
+                    <button class="sideBarButton" id="rotateClockwise" title="rotate image to the right"><i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+
+                <div class="subCategory">
+                    <div class="categoryElement">
+                        <h1 class="title">Custom Rotate</h1>
+                        <input type="value" id="rotateCustomValue"><br>
+                        <button class="sideBarButton" id="rotateCustom" title="scale image by custom factor">Rotate</button>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="category">
+                <h3 class="categoryTitle">Highlight</h3>
+                <div class="categoryElement">
+                    <h1 class="title">Brightness</h1>
+                    <button class="sideBarButton" id="darken" title="darken image"><i class="fa-regular fa-sun"></i></button>
+                    
+                    <button class="sideBarButton" id="brighten" title="brighten image"><i class="fa-solid fa-sun"></i></button> 
+                </div>
+
+                <div class="categoryElement">
+                    <h1 class="title">Contrast</h1>
+                    <input type="range" min="1" max="200" value="100" step="10" class="slider" id="contrastSlider">
+                </div>
+            </div>
+
+            <div class="category">
+                <h3 class="categoryTitle">Scaling</h3>
+                <div>   
+                    <div class="categoryElement">
+                        <h1 class="title">Scale</h1>
+                        <button class="sideBarButton" id="scaleNoSmoothFactor05" title="scale down by factor of 0.5"><i class="fa-solid fa-compress"></i></button>
+                        
+                        <button class="sideBarButton" id="scaleNoSmoothFactor2" title="scale up by factor of 2.0"><i class="fa-solid fa-expand"></i></button>
+                    </div>
+                    <div class="categoryElement">
+                        <h1 class="title">with Smoothing</h1>
+                        <button class="sideBarButton" id="scaleSmoothFactor05" title="scale down by factor of 0.5"><i class="fa-solid fa-compress"></i></button>
+                        
+                        <button class="sideBarButton" id="scaleSmoothFactor2" title="scale up by factor of 2.0"><i class="fa-solid fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="subCategory">
+                    <div class="categoryElement">
+                        <h1 class="title">Custom Scale</h1>
+                        <input type="value" id="smoothCustomValue"> <br> <br>
+                        <button class="sideBarButton" id="scaleNormalFactorCustom" title="scale image by custom factor">Normal</button>
+                        <button class="sideBarButton" id="scaleSmoothFactorCustom" title="scale image by custom factor with smoothing">Smooth</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3 class="categoryTitle">Filter</h3>
+                <div>
+                    <div class="categoryElement">
+                        <h1 class="title">Gaussian Blur</h1>
+                        <button class="sideBarButton" id="gaussianBlur3x3" title="blur image with guassian blur 3x3"><i class="fa-solid fa-3"></i></button>
+                        <button class="sideBarButton" id="gaussianBlur5x5" title="blur image with guassian blur 5x5"><i class="fa-solid fa-5"></i></button>
+                    </div>
+                </div>
+    
+                <div class="categoryElement">
+                    <h1 class="title">Edge Detection</h1>
+                    <button class="sideBarButton" id="edgeDetection" title="detection of edges"><i class="fa-solid fa-code-merge"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container middlecontainer">
+            <img id="backgroundImage" src="assets/paint-brush-icon-9019.png" alt="">
+            <div class="canvas-wrapper">
+                <div id="imgCanvasWrapper">
+                    <canvas id="imageCanvas" width="800" height="800"></canvas>
+                </div>
+                <label for="imgUpload" id="inputfileLabel"> <i class="fa-solid fa-upload"></i>  Upload Image</label>
+                <input type="file" class="inputfile" id="imgUpload">
+            </div>
+        </div>
+
+        <div class="container rightcontainer">
+            <div class="subcontainer">
+                <div class="topsubcontainer">
+                    
+                    <div class="category">
+                        <h3 class="categoryTitle">Color</h3>
+                        <div class="categoryElement">
+                            <button class="sideBarButton" id="invert" title="invert color"><i class="fa-solid fa-arrows-rotate"></i></button>
+                            
+                        </div>
+            
+                        <div class="categoryElement">
+                            <button class="sideBarButton" id="grayscale" title="graysacle image"><i class="fa-solid fa-eye-dropper"></i></button>
+                            
+                        </div>
+                    
+                        <div class="categoryElement">
+                            <h1 class="title">White/Black</h1>
+                            <input type="range" min="1" max="100" value="50" step="10" class="value" id="blackWhiteSlider">
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <h3 class="categoryTitle">RGB</h3>
+                        <div class="categoryElement">
+                            <h1 class="title">Red</h1>
+                            <input type="range" min="-255" max="255" value="0" id="redSlider">
+                        </div>
+
+                        <div class="categoryElement">
+                            <h1 class="title">Green</h1>
+                            <input type="range" min="-255" max="255" value="0" id="greenSlider">
+                        </div>
+
+                        <div class="categoryElement">
+                            <h1 class="title">Blue</h1>
+                            <input type="range" min="-255" max="255" value="0" id="blueSlider">
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <h3 class="categoryTitle">Statistics</h3>
+                        <div class="categoryElement">
+                            <h1 class="title">Red</h1>
+                            <canvas id="histogramCanvasRed" class="histogramCanvas" width="150" height="150"></canvas>
+                        </div>
+
+                        <div class="categoryElement">
+                            <h1 class="title">Green</h1>
+                            <canvas id="histogramCanvasGreen" class="histogramCanvas" width="150" height="150"></canvas>
+                        </div>
+
+                        <div class="categoryElement">
+                            <h1 class="title">Blue</h1>
+                            <canvas id="histogramCanvasBlue" class="histogramCanvas" width="150" height="150"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container footerWrapper footer">
+            <span>This website was made by <a href=" https://bubblybytes.com/ " target="_blank"> BubblyBytes </a> Company &copy; 2023 </span>
+        </div>
+    </div>
+</body>

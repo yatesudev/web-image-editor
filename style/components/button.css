@@ -1,0 +1,85 @@
+/*lightmode*/
+.sideBarButton,
+.sideBarButton:active,
+.sideBarButton:focus {
+  background-color: var(--mainButton);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+
+  outline: none;
+  border: none;
+  position: relative; 
+
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.8);
+
+  font-weight: bold;
+}
+
+/*lightmode*/
+.sideBarButton:hover {
+  background-color: var(--buttonHighlight);
+}
+
+.sideBarButton:active {
+  transform: scale(0.95);
+}
+
+
+/* HeaderButton */
+
+.headerButton, .headerButton:active, .headerButton:focus {
+  margin: 5px;
+  background-color: var(--mainButton);
+  border: none;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.8);
+}
+
+/*lightmode*/
+.headerButton:hover {
+  background-color: var(--buttonHighlight);
+}
+
+.headerButton:active {
+  transform: scale(0.95);
+}
+
+/*lightmode*/
+#inputfileLabel {
+  margin: 0 auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--background);
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+/*lightmode*/
+#inputfileLabel:hover {
+  background-color: var(--buttonHighlight);
+}
+
+#inputfileLabel:active {
+  transform: scale(0.95);
+}

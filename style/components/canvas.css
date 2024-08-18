@@ -1,0 +1,24 @@
+.canvas-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+#imgCanvasWrapper{
+    display: none;
+
+    background-image: url(/assets/transparent-background-4k-empty-grid-checkered-layout-wallpaper-free-vector.jpg);
+    border: 2px dashed black;
+    padding-left: 5vw; /* Optional -> Besseres Bildschirm aussehen*/
+    padding-right: 5vw; /* Optional -> Besseres Bildschirm aussehen*/
+}
+
+#imageCanvas {
+
+    border-left: 2px dotted rgb(94, 94, 94);
+    border-right: 2px dotted rgb(94, 94, 94);
+}
+
+.histogramCanvas {
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.23);
+}
