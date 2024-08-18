@@ -3,7 +3,7 @@
 ## Overview
 This project is a browser-based image editing tool developed for the course "Selected Areas of Human-Technology Interaction". The goal was to implement basic image processing algorithms using JavaScript.
 
-<img src="example_photo.jpeg" alt="Example Photo" width="300"/>
+<img src="example_photo.png" alt="Example Photo" width="300"/>
 
 ## Features
 The tool includes the following functionalities:
