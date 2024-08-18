@@ -1,7 +1,9 @@
 # Image Editing Tool
 
 ## Overview
-This project is a browser-based image editing tool developed for the course "Selected Areas of Human-Technology Interaction" in Winter 2023/24 under Prof. Dr.-Ing. Gordon Müller. The goal was to implement basic image processing algorithms using JavaScript.
+This project is a browser-based image editing tool developed for the course "Selected Areas of Human-Technology Interaction". The goal was to implement basic image processing algorithms using JavaScript.
+
+<img src="example_photo.jpeg" alt="Example Photo" width="300"/>
 
 ## Features
 The tool includes the following functionalities:
